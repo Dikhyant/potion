@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/_components/Header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={"font-montserrat"}>
+        <Header 
+          className="fixed left-2/4 -translate-x-2/4 mt-[30px]"
+        />
+        {children}
+      </body>
     </html>
   );
 }
