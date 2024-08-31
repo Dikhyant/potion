@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"font-montserrat"}>
+      <body className={"font-montserrat custom-scroll"}>
         <Header 
           className="fixed left-2/4 -translate-x-2/4 mt-[30px]"
         />

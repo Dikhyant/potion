@@ -16,3 +16,7 @@
     font-family: 'Montserrat-600';
     src: url("../assets/fonts/montserrat-600.woff2");
 }
+
+.custom-scroll::-webkit-scrollbar {
+    display: none;
+}

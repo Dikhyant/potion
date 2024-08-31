@@ -54,9 +54,10 @@ export default function Header({
             </Link>
             
             {
-                navItems.map(item => {
+                navItems.map((item , index) => {
                     return (
                         <NavItem
+                            key={index}
                             text={item.text}
                             href={item.href}
                         />
