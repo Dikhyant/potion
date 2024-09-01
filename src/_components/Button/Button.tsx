@@ -1,5 +1,5 @@
 import { cn } from "@/utils/misc";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 
 type TButton = {
     buttonVariant?: TButtonVariant;
@@ -14,13 +14,38 @@ export default function Button({
     children,
     className,
 }: TButton) {
+    const [isMouseEnter, setIsMouseEnter] = useState<boolean>(false);
+    const [isMouseLeave, setIsMouseLeave] = useState<boolean>(false);
+    function onMouseEnter() {
+        console.log("onMouseEnter");
+        setIsMouseEnter(true);
+        setIsMouseLeave(false);
+    }
+
+    function onMouseLeave() {
+        console.log("onMouseLeave");
+        setIsMouseEnter(false);
+        setIsMouseLeave(true);
+    }
     return (
         <button
             className={cn(
-                "rounded-full w-[320px] h-[75px] font-medium",
+                "rounded-full w-[320px] h-[75px] font-medium relative overflow-hidden z-[0] *:z-[2]",
                 buttonVariant === "filled" ? "bg-primary text-white" : buttonVariant === "outlined" ? "bg-transparent text-black" : "",
                 className
             )}
-        >{children}</button>
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+        >
+            {children}
+            {
+                buttonVariant === "filled" && (
+                    <>
+                        <div className={cn("absolute top-0 rounded-full w-full h-full bg-primary-100 -left-full !z-[1]", isMouseEnter && "animate-enterFromLeft", isMouseLeave && "animate-exitToRight")} ></div>
+                        <div className={cn("absolute top-0 rounded-full w-full h-full bg-primary-200 -left-full !z-[1]", isMouseEnter && "animate-enterFromLeft" , isMouseLeave && "animate-exitToRight")} ></div>
+                    </>
+                )
+            }
+        </button>
     )
 }

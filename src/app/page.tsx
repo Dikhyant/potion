@@ -26,13 +26,25 @@ export default function Home() {
       setHeroVideoBackgroundWidth(5000 * scrollAmount + 100);
     }
   }, []);
+
+  useEffect(() => {
+    return;
+    window.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      console.log("e.deltaY - ", e.deltaY);
+      const scrollAmount = 0.1;
+      window.scrollBy({top: e.deltaY * scrollAmount});
+    },{passive: false});
+  }, []);
   return (
     <main 
-      className=" w-full h-screen pt-[138px]  z-[-2] *:z-[1]" 
+      className=" w-full h-screen z-[-2] *:z-[1] bg-tertiary pt-[138px]" 
       ref={rootComponentRef}
     >
       <h1
-        className="text-[56px] md:text-[84px] lg:text-[6.6666666667vw] font-semibold whitespace-pre-line text-center leading-[90%] tracking-[-.05em]"
+        className="text-[56px] md:text-[84px] lg:text-[6.6666666667vw] 
+                  font-semibold whitespace-pre-line text-center leading-[90%] 
+                  tracking-[-.05em] animate-fadeIn"
       >{"Personalized\nAI videos"}
       </h1>
       <p
@@ -44,7 +56,9 @@ export default function Home() {
         className="flex justify-center mt-[50px]"
       >
         <Button
-          className="w-[329.14px] h-[104px] flex items-center justify-center gap-x-[12.6px]"
+          className="w-[329.14px] h-[104px] flex items-center justify-center gap-x-[12.6px] 
+                     scale-x-0 animate-[scaleX_1.2s_cubic-bezier(0,.89,.06,1.38)_forwards] 
+                     *:opacity-0 *:animate-fadeIn *:[animation-delay:700ms]"
         >
           <div
             className="text-[28px] font-medium uppercase tracking-[-.04em] leading-[70px]"

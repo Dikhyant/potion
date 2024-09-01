@@ -42,7 +42,7 @@ export default function Header({
     );
     return (
         <header
-            className={cn("flex items-center rounded-full w-[821.81px] h-[66px] bg-white p-[10px]", className)}
+            className={cn("flex items-center rounded-full w-[821.81px] h-[66px] bg-white p-[10px] animate-fade", className)}
         >
             <Link
                 href=""

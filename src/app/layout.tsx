@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={"font-montserrat custom-scroll"}>
         <Header 
-          className="fixed left-2/4 -translate-x-2/4 mt-[30px]"
+          className="fixed left-2/4 -translate-x-2/4 top-[30px] animate-fadeIn"
         />
         {children}
       </body>
