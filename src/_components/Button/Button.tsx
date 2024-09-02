@@ -30,7 +30,7 @@ export default function Button({
     return (
         <button
             className={cn(
-                "rounded-full w-[320px] h-[75px] font-medium relative overflow-hidden z-[0] *:z-[2]",
+                "group rounded-full w-[320px] h-[75px] font-medium relative overflow-hidden z-[0] *:z-[2]",
                 buttonVariant === "filled" ? "bg-primary text-white" : buttonVariant === "outlined" ? "bg-transparent text-black" : "",
                 className
             )}
@@ -41,8 +41,8 @@ export default function Button({
             {
                 buttonVariant === "filled" && (
                     <>
-                        <div className={cn("absolute top-0 rounded-full w-full h-full bg-primary-100 -left-full !z-[1]", isMouseEnter && "animate-enterFromLeft", isMouseLeave && "animate-exitToRight")} ></div>
-                        <div className={cn("absolute top-0 rounded-full w-full h-full bg-primary-200 -left-full !z-[1]", isMouseEnter && "animate-enterFromLeft" , isMouseLeave && "animate-exitToRight")} ></div>
+                        <div className={cn("absolute top-0 rounded-full w-full h-full bg-primary-100 -left-full !z-[1] group-hover:animate-enterFromLeft", isMouseLeave && "animate-exitToRight")} ></div>
+                        <div className={cn("absolute top-0 rounded-full w-full h-full bg-primary-200 -left-full !z-[1] group-hover:animate-enterFromLeft", isMouseLeave && "animate-exitToRight")} ></div>
                     </>
                 )
             }

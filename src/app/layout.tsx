@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/_components/Header/Header";
+import Footer from "@/_components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,9 @@ export default function RootLayout({
           className="fixed left-2/4 -translate-x-2/4 top-[30px] animate-fadeIn"
         />
         {children}
+        <Footer
+
+        />
       </body>
     </html>
   );

@@ -10,6 +10,7 @@ export default function Home() {
   const rootComponentRef = useRef<HTMLElement>(null);
   const [heroVideoBackgroundWidth, setHeroVideoBackgroundWidth] = useState<number>(0);
   useEffect(() => {
+    return;
     if(rootComponentRef.current) {
       rootComponentRef.current?.addEventListener("scroll", (e) => {
         console.log("rootComponentRef.current?.scrollTop - ",rootComponentRef.current?.scrollTop)
@@ -19,6 +20,7 @@ export default function Home() {
   }, [rootComponentRef.current]);
 
   useEffect(() => {
+    return;
     const body = document.getElementsByTagName("body")[0];
     body.onscroll = (e) => {
       console.log("window.scrollY - ", window.scrollY);
@@ -69,11 +71,11 @@ export default function Home() {
         </Button>
       </div>
 
-      <div
+      {/* <div
         className="flex items-center justify-center mt-[41px]"
       >
         <div
-          className="bg-[#6d27a1] rounded-full absolute z-[-1]"
+          className="bg-[#6d27a1] rounded-full absolute"
           style={{
             width: heroVideoBackgroundWidth,
             height: heroVideoBackgroundWidth,
@@ -82,7 +84,7 @@ export default function Home() {
         <HeroVideo
           src="/videos/hero-video.mp4"
         />
-      </div>
+      </div> */}
     </main>
   );
 }

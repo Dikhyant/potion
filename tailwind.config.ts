@@ -42,8 +42,10 @@ const config: Config = {
           '100%': {left: '0%'},
         },
         exitToRight: {
-          '0%': { left: '0%' },
-          '100%': { left: '100%' },
+          // '0%': { left: '0%' },
+          // '100%': { left: '100%' },
+          // '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(200%)' }
         }
       },
       animation: {
