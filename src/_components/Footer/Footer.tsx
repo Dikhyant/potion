@@ -1,5 +1,11 @@
 import FooterNavItem from "../FooterNavItem/FooterNavItem";
+import FooterSocialNavItem from "../FooterSocialNavItem/FooterSocialNavItem";
+import FacebookIcon from "../Icons/FacebookIcon";
+import InstagramIcon from "../Icons/InstagramIcon";
+import LinkedinIcon from "../Icons/LinkedinIcon";
 import PotionIcon from "../Icons/PotionIcon";
+import XIcon from "../Icons/XIcon";
+import YouTubeIcon from "../Icons/YouTubeIcon";
 
 type TFooterNavItem = React.ComponentProps<typeof FooterNavItem>;
 const footerNavItems:TFooterNavItem[] = [
@@ -69,6 +75,30 @@ const footerNavItems:TFooterNavItem[] = [
     }
 ] 
 
+type TFooterSocialNavItem = React.ComponentProps<typeof FooterSocialNavItem>;
+const footerSocialNavItems:TFooterSocialNavItem[] = [
+    {
+        children: <InstagramIcon />,
+        href: ""
+    },
+    {
+        children: <XIcon />,
+        href: ""
+    },
+    {
+        children: <FacebookIcon />,
+        href: ""
+    },
+    {
+        children: <LinkedinIcon />,
+        href: ""
+    },
+    {
+        children: <YouTubeIcon />,
+        href: ""
+    }
+]
+
 export default function Footer() {
     return (
         <footer className="bg-black text-white  pt-[140px] pb-[145px] " >
@@ -96,6 +126,21 @@ export default function Footer() {
                             })
                         }
                     </div>
+                </div>
+
+                <div className="flex items-center" >
+                    {
+                        footerSocialNavItems.map(item => {
+                            return (
+                                <FooterSocialNavItem
+                                    href={item.href}
+                                    className="px-5"
+                                >
+                                    {item.children}
+                                </FooterSocialNavItem>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </footer>
