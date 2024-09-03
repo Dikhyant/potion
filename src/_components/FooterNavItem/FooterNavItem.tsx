@@ -19,6 +19,12 @@ export default function FooterNavItem({
                 "text-[21px] font-medium tracking-[-.02em] leading-[115%]",
                 className
             )}
-        >{text}</Link>
+        >
+            <span className="block w-max after:block after:left-0 after:right-0 after:h-1 
+                             after:border-b after:scale-x-0 hover:after:scale-100 
+                             after:transition-transform after:duration-[.6s] after:ease-[cubic-bezier(.16,1,.3,1)] after:origin-left" >
+                {text}
+            </span>
+        </Link>
     )
 }
