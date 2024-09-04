@@ -21,6 +21,7 @@ const config: Config = {
         "primary-200": "#933bd7",
         secondary: "white",
         tertiary: "#fafafa",
+        granite: "#808080",
       },
       fontFamily: {
         "montserrat": ["Montserrat", "sans-serif"],

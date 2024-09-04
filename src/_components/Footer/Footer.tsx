@@ -75,6 +75,17 @@ const footerNavItems:TFooterNavItem[] = [
     }
 ] 
 
+const privaryAndTerms:TFooterNavItem[] = [
+    {
+        text: "Privacy Policy",
+        href: ""
+    },
+    {
+        text: "Terms",
+        href: ""
+    }
+]
+
 type TFooterSocialNavItem = React.ComponentProps<typeof FooterSocialNavItem>;
 const footerSocialNavItems:TFooterSocialNavItem[] = [
     {
@@ -128,7 +139,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex items-center" >
+                <div className="flex items-center mt-[70px] -mx-5" >
                     {
                         footerSocialNavItems.map(item => {
                             return (
@@ -141,6 +152,27 @@ export default function Footer() {
                             )
                         })
                     }
+                </div>
+
+                <div className="flex items-center mt-[40px] -mx-[15px]" >
+                    {
+                        privaryAndTerms.map(item => {
+                            return (
+                                <FooterNavItem
+                                    text={item.text}
+                                    href={item.href}
+                                    className="px-[15px] text-base font-medium tracking-[-.02em] leading-4 text-granite hover:text-white"
+                                />
+                            )
+                        })
+                    }
+                    <FooterNavItem
+                        text={process.env.SUPPORT_EMAIL ? process.env.SUPPORT_EMAIL : "support@sendpotion.com"}
+                        href=""
+                        className="px-[15px] text-base font-medium tracking-[-.02em] leading-4"
+                        isUnderlineVisibleWhileUnhover
+                        isUnderlineOriginRight
+                    />
                 </div>
             </div>
         </footer>
