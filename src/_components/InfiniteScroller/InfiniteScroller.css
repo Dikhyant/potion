@@ -1,0 +1,18 @@
+@keyframes leftToRightInfiniteScroll {
+    0% {
+        /* transform: translateX(0%); */
+        left: 100%;
+    }
+
+    100% {
+        /* transform: translateX(-200%); */
+        left: -20%;
+    }
+}
+
+.leftToRightInfiniteScroll {
+    animation-name: leftToRightInfiniteScroll;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

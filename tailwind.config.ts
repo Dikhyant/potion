@@ -47,13 +47,18 @@ const config: Config = {
           // '100%': { left: '100%' },
           // '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(200%)' }
+        },
+        leftToRightInfiniteScroll: {
+          '0%': { left: '100%' },
+          '100%': { left: '-100%' },
         }
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out forwards',
         scaleX: 'scaleX 1s ease-in-out forwards',
         enterFromLeft: 'enterFromLeft 1s ease-in-out forwards',
-        exitToRight: 'exitToRight 1s ease-in-out forwards'
+        exitToRight: 'exitToRight 1s ease-in-out forwards',
+        leftToRightInfiniteScroll: 'leftToRightInfiniteScroll 20s linear infinite',
       },
     },
   },

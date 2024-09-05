@@ -2,9 +2,34 @@
 import Button from "@/_components/Button/Button";
 import HeroVideo from "@/_components/HeroVideo/HeroVideo";
 import ArrowRight from "@/_components/Icons/ArrowRight";
+import InfiniteScroller from "@/_components/InfiniteScroller/InfiniteScroller";
 import { DetailedHTMLProps, HTMLAttributes, use, useEffect, useRef, useState } from "react";
 // import HeroVideoContent from "@/assets/videos/hero-video.mp4";
 // const HeroVideoContent = require("@/assets/videos/hero-video.mp4");
+
+const testStringsForInfScroll = [
+  "Damon",
+  "Stefan",
+  "Bonnie",
+  "Elena",
+  "Elijha",
+  "Klaus",
+  "Rebekah",
+  "Caroline",
+  "Tylor",
+  "Jerremy",
+  "Mikael",
+  "Olivia",
+  "Josh",
+  "Davina",
+  "Ester",
+  "Camil",
+  "Jenna",
+  "Katherine",
+  "Kol",
+  "Finn",
+  "Jonathan"
+]
 
 export default function Home() {
   const rootComponentRef = useRef<HTMLElement>(null);
@@ -85,6 +110,18 @@ export default function Home() {
           src="/videos/hero-video.mp4"
         />
       </div> */}
+
+      <InfiniteScroller
+        className="gap-x-[30px] border border-blue-900 w-[300px] h-[60px] ml-[50%]"
+      >
+        {
+          testStringsForInfScroll.map(item => {
+            return (
+              <div className="bg-red-500" >{item}</div>
+            )
+          })
+        }
+      </InfiniteScroller>
     </main>
   );
 }
