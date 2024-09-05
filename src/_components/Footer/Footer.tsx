@@ -114,9 +114,9 @@ export default function Footer() {
     return (
         <footer className="bg-black text-white  pt-[140px] pb-[145px] " >
             <div
-                className="px-[100px] mx-[168px] w-auto"
+                className="px-[30px] md:px-[50px] lg:px-[80px] xl:px-[100px] md:mx-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
             >
-                <div className="flex max-lg:flex-col justify-between" >
+                <div className="flex max-lg:flex-col *:flex-1 justify-center" >
                     <div>
                         <PotionIcon
                         />
