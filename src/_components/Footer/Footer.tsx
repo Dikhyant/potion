@@ -116,14 +116,14 @@ export default function Footer() {
             <div
                 className="px-[100px] mx-[168px] w-auto"
             >
-                <div className="flex justify-between" >
+                <div className="flex max-lg:flex-col justify-between" >
                     <div>
                         <PotionIcon
                         />
                         <p className="whitespace-pre-line text-[28px] font-semibold tracking-[-.04em] leading-[115%] mt-[30px]" >{"Create personalized\nvideos at scale"}</p>
                     </div>
                     <div
-                        className="grid grid-cols-[250px_250px] pt-[100px]"
+                        className="grid md:grid-cols-[250px_250px] pt-[100px]"
                     >
                         {
                             footerNavItems.map(item => {
