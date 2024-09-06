@@ -3,6 +3,7 @@ import Button from "@/_components/Button/Button";
 import HeroVideo from "@/_components/HeroVideo/HeroVideo";
 import ArrowRight from "@/_components/Icons/ArrowRight";
 import InfiniteScroller from "@/_components/InfiniteScroller/InfiniteScroller";
+import MarketingToolsInfiniteScoller from "@/_components/MarketingToolsInfiniteScoller/MarketingToolsInfiniteScoller";
 import { DetailedHTMLProps, HTMLAttributes, use, useEffect, useRef, useState } from "react";
 // import HeroVideoContent from "@/assets/videos/hero-video.mp4";
 // const HeroVideoContent = require("@/assets/videos/hero-video.mp4");
@@ -111,8 +112,8 @@ export default function Home() {
         />
       </div> */}
 
-      <InfiniteScroller
-        className="gap-x-[30px] border border-blue-900 w-[300px] h-[60px] ml-[50%]"
+      {/* <InfiniteScroller
+        className="gap-x-[30px] border border-blue-900 w-[300px] h-[60px] ml-[50%] rounded-full"
       >
         {
           testStringsForInfScroll.map(item => {
@@ -121,7 +122,11 @@ export default function Home() {
             )
           })
         }
-      </InfiniteScroller>
+        Hank
+        John
+      </InfiniteScroller> */}
+
+      <MarketingToolsInfiniteScoller />
     </main>
   );
 }

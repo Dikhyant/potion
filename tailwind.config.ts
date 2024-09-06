@@ -22,6 +22,7 @@ const config: Config = {
         secondary: "white",
         tertiary: "#fafafa",
         granite: "#808080",
+        "soft-peach": "#eeeeee",
       },
       fontFamily: {
         "montserrat": ["Montserrat", "sans-serif"],
@@ -49,8 +50,8 @@ const config: Config = {
           '100%': { transform: 'translateX(200%)' }
         },
         leftToRightInfiniteScroll: {
-          '0%': { left: '100%' },
-          '100%': { left: '-100%' },
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
         }
       },
       animation: {
