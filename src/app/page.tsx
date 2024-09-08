@@ -4,7 +4,11 @@ import HeroVideo from "@/_components/HeroVideo/HeroVideo";
 import ArrowRight from "@/_components/Icons/ArrowRight";
 import InfiniteScroller from "@/_components/InfiniteScroller/InfiniteScroller";
 import MarketingToolsInfiniteScoller from "@/_components/MarketingToolsInfiniteScoller/MarketingToolsInfiniteScoller";
+import Image from "next/image";
 import { DetailedHTMLProps, HTMLAttributes, use, useEffect, useRef, useState } from "react";
+import Woman1 from "@/assets/images/pfp/woman-in-coat.jpg";
+import Woman2 from "@/assets/images/pfp/woman-in-coat-2.jpg";
+import Man1 from "@/assets/images/pfp/man-in-coat.jpg";
 // import HeroVideoContent from "@/assets/videos/hero-video.mp4";
 // const HeroVideoContent = require("@/assets/videos/hero-video.mp4");
 
@@ -66,7 +70,7 @@ export default function Home() {
   }, []);
   return (
     <main 
-      className=" w-full h-screen z-[-2] *:z-[1] bg-tertiary pt-[138px]" 
+      className=" w-full bg-tertiary pt-[138px]" 
       ref={rootComponentRef}
     >
       <h1
@@ -95,6 +99,32 @@ export default function Home() {
             className="text-white w-[25.2px] h-[25.2px]"
           />
         </Button>
+      </div>
+
+      <div className="text-8xl font-semibold text-center align-text-bottom tracking-[-.05em] leading-[90%]" >
+        Trusted by<br /><div>{'10000+ sales reps'}
+        <div
+          className="relative w-[86px] h-[86px] inline-block ml-9 top-4"
+        >
+          <Image
+            src={Woman1}
+            alt="Woman1"
+            width={86}
+            height={86}
+            className="absolute rounded-full -left-[18px] z-[3]"
+          />
+          <Image
+            src={Woman2}
+            alt="Woman2"
+            className="absolute rounded-full z-[2]"
+          />
+          <Image
+            src={Man1}
+            alt="Man1"
+            className="absolute rounded-full left-[18px] z-[1]"
+          />
+        </div>
+        </div>
       </div>
 
       {/* <div
@@ -126,7 +156,9 @@ export default function Home() {
         John
       </InfiniteScroller> */}
 
-      <MarketingToolsInfiniteScoller />
+      <MarketingToolsInfiniteScoller 
+        className="mx-[15px] mt-16 w-auto"
+      />
     </main>
   );
 }

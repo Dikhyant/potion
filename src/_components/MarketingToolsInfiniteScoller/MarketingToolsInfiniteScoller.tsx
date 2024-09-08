@@ -9,6 +9,7 @@ import Lemlist from "@/assets/images/partner-logos/lemlist.png";
 import GoHighLevel from "@/assets/images/partner-logos/gohighlevel.png";
 import CloseLogo from "@/assets/images/partner-logos/close.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { cn } from "@/utils/misc";
 
 type LogoData = {
     src: string | StaticImport;
@@ -50,10 +51,16 @@ const logos:LogoData[] = [
     }
 ]
 
-export default function MarketingToolsInfiniteScoller() {
+type TMarketingToolsInfiniteScoller = {
+    className?: string;
+}
+
+export default function MarketingToolsInfiniteScoller({
+    className,
+}: TMarketingToolsInfiniteScoller) {
     return (
         <InfiniteScroller
-            className="border-soft-peach border rounded-full w-[1506px] h-[100px]"
+            className={cn("border-soft-peach border rounded-full w-[1506px] h-[100px]", className)}
             childrenWrapperClassName="[animation-duration:30s]"
             childrenWrapperClassName1="[animation-delay:-15s]"
         >
