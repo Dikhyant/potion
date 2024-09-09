@@ -101,7 +101,7 @@ export default function Home() {
         </Button>
       </div>
 
-      <div className="text-8xl font-semibold text-center align-text-bottom tracking-[-.05em] leading-[90%]" >
+      <div className="text-[50px] md:text-[84px] xl:text-8xl font-semibold text-center align-text-bottom tracking-[-.05em] leading-[90%]" >
         Trusted by<br /><div>{'10000+ sales reps'}
         <div
           className="relative w-[86px] h-[86px] inline-block ml-9 top-4"
