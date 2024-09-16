@@ -9,6 +9,7 @@ import { DetailedHTMLProps, HTMLAttributes, use, useEffect, useRef, useState } f
 import Woman1 from "@/assets/images/pfp/woman-in-coat.jpg";
 import Woman2 from "@/assets/images/pfp/woman-in-coat-2.jpg";
 import Man1 from "@/assets/images/pfp/man-in-coat.jpg";
+import ScrollResponsiveContainer from "@/_components/ScrollResponsiveContainer/ScrollResponsiveContainer";
 // import HeroVideoContent from "@/assets/videos/hero-video.mp4";
 // const HeroVideoContent = require("@/assets/videos/hero-video.mp4");
 
@@ -127,34 +128,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div
-        className="flex items-center justify-center mt-[41px]"
-      >
-        <div
-          className="bg-[#6d27a1] rounded-full absolute"
-          style={{
-            width: heroVideoBackgroundWidth,
-            height: heroVideoBackgroundWidth,
-          }}
-        ></div>
-        <HeroVideo
-          src="/videos/hero-video.mp4"
-        />
-      </div> */}
-
-      {/* <InfiniteScroller
-        className="gap-x-[30px] border border-blue-900 w-[300px] h-[60px] ml-[50%] rounded-full"
-      >
-        {
-          testStringsForInfScroll.map(item => {
-            return (
-              <div className="bg-red-500" >{item}</div>
-            )
-          })
-        }
-        Hank
-        John
-      </InfiniteScroller> */}
+      <ScrollResponsiveContainer></ScrollResponsiveContainer>
 
       <MarketingToolsInfiniteScoller 
         className="mx-[15px] mt-16 w-auto"

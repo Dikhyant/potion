@@ -65,9 +65,9 @@ export default function MarketingToolsInfiniteScoller({
             childrenWrapperClassName1="[animation-delay:-15s]"
         >
             {
-                logos.map(item => {
+                logos.map((item, index) => {
                     return (
-                        <div className="w-[270px] h-[48px] flex items-center justify-center" >
+                        <div className="w-[270px] h-[48px] flex items-center justify-center" key={index} >
                             <Image
                                 src={item.src}
                                 alt={item.alt ? item.alt : "Marketing tool logo"}
